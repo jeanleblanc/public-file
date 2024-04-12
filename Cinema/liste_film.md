@@ -1,0 +1,155 @@
+#cinema  #liste 
+- [x] Dune
+-   [ ] La haine
+-   [x] Thé social network
+-   [ ] Blade runner
+-   [x] Les nouveaux sauvages
+-   [ ] Léon
+-   [x] Le prestige
+-   [x] Harry Potter (saga)
+-   [x] Shining
+-   [ ] Zodiac
+-   [x] Kill bill
+-   [x] Forest gump
+-   [x] Lord of the ring (trilogie)
+-   [x] Lalaland
+-   [ ] Hunger games
+-   [ ] Mariage story
+-   [ ] Wall E
+-   [x] Ratatouille
+-   [ ] Schindler list
+-   [ ] The revenant
+-   [x] Skyfall
+-   [ ] Night call
+-   [ ] American beauty
+-   [ ] Call me by your name
+-   [ ] Le dîner de con
+-   [x] Dragon (trilogy)
+-   [ ] Les misérables
+-   [x] Inglorious basterds
+-   [ ] Terminator
+-   [x] Le man 66
+-   [ ] Taxi driver
+-   [ ] Citizen Kane
+-   [x] The Truman show
+-   [ ] La mort au trousse
+-   [ ] Château dans le ciel
+-   [x] Retour vers le futur
+-   [ ] Edward au main d’argent
+-   [ ] indjana johns
+-   [ ] Apocalypse now
+-   [ ] Green line
+-   [ ] Rush hour (trilogy)
+-   [ ] Dunkerk
+-   [ ] Fast and furious (saga)
+-   [x] Avatar
+-   [ ] West side story
+-   [ ] Tu ne tueras point
+-   [x] The pianist
+-   [ ] Les affranchis
+-   [ ] Gladiator
+-   [ ] Les évadée
+-   [x] Star Wars (univers)
+-   [ ] Matrix (saga)
+-   [ ] Le fondateur
+-   [ ] Rencontre du 3e type
+-   [ ] Thé big lebowski
+-   [x] Pulp fiction
+-   [ ] Contact
+-   [ ] Usual suspect
+-   [x] Seven
+-   [ ] There will be blood
+-   [ ] American pie
+-   [ ] Le parrain (trilogy)
+-   [ ] Alien
+-   [ ] Il faut sauver le soldat ryan
+-   [x] Taken
+-   [x] Scarface
+-   [ ] Reservoir dogs
+-   [ ] Le silence des agneaux
+-   [x] Get out
+-   [ ] Driver
+-   [ ] Casino
+-   [x] American psycho
+-   [x] Fury
+-   [x] Borat (2)
+-   [x] Pirates des Caraïbes (saga)
+-   [x] Spider-Man
+-   [x] Charlie et la chocolaterie
+-   [x] Rio (2)
+-   [x] Memento
+-   [x] OSS 117 (trilogie)
+-   [x] Elvis
+-   [x] Silence voice
+-   [x] Your name
+-   [x] The imitation game
+-   [x] Amadeus
+-   [x] Rush
+-   [x] Zootopia
+-   [x] Château ambulant
+-   [x] vice versa
+-   [x] La grande vadrouille
+-   [x] Bohemian rapsody
+-   [x] Joker
+-   [x] Batman (Nolan trilogie)
+-   [x] Thé Batman
+-   [x] Gran Torino
+-   [x] Django unchained
+-   [x] Spider man new generation
+-   [x] Top gun (2)
+-   [x] Astérix et obelix mission cleopatre
+-   [x] Iron man (trilogy)
+-   [x] Madagascar (saga)
+-   [x] La soupe au choux
+-   [x] L’aile ou la cuisse
+-   [x] Rabbi Jacob
+-   [x] Le grand restaurant
+-   [x] Les tuches (saga)
+-   [x] La haut
+-   [x] Forest gump
+-   [x] Fight club
+-   [x] Whiplash
+-   [x] The mask
+-   [x] La bon la brute et le truan
+-   [x] toys story (saga)
+-   [x] Cars (3)
+-   [x] NemO
+-   [x] Coco (Disney)
+-   [x] Coco
+-   [x] Croc blanc
+-   [x] Titanic
+-   [x] Maman j’ai raté l’avion
+-   [x] Parasite
+-   [x] 12 hommes en colères
+-   [x] Pride and prejudice
+-   [x] Very bad trip
+-   [x] E.t.
+-   [x] Tenet
+-   [x] Avengers (saga)
+-   [x] Ready player one
+-   [x] Once uppon a time in Hollywood
+-   [x] Indestructible
+-   [x] Catch me if you can
+-   [x] Shutter island
+-   [x] Océan eleven
+-   [x] Princess mononoke
+-   [x] Projet x
+-   [x] Hobbit (trilogie)
+-   [x] Narnia
+-   [x] Porcorosso
+-   [x] Gardien de la galaxie
+-   [x] Robbin des bois
+-   [x] Dracula
+-   [x] A la croisée des mondes
+-   [x] Âge de glace (saga)
+-   [x] Mort sur le nyl
+-   [x] Le crime de Lorient express
+-   [x] Étrange noel de mr jack
+-   [x] Insaisissable
+-   [x] Inception
+-   [x] Intouchable
+-   [x] Totoro
+-   [x] Le voyage de chiiro
+-   [x] Interstellar
+-   [x] Jurassic park
+-   [x] Le loup de Wall Street

@@ -1,0 +1,47 @@
+html {
+    scroll-behavior: smooth;
+    max-height: 100vh;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh; /* Adjust as necessary */
+}
+
+body {
+    background: rgb(254, 255, 234);
+    font-family: 'Space Mono', monospace;
+    color: #333333;
+    overflow-y: scroll;
+    max-height: 100vh;
+    overflow-y: hidden;
+    scrollbar-width: none; /* For Firefox */
+     
+}
+
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Ensure each section fills the viewport and snaps into place */
+section {
+    scroll-snap-align: start;
+    height: 100vh; /* Adjust based on your design needs */
+    /* Other styling as needed */
+}
+
+
+p {
+    color: #333333;
+    font-family: 'Space Mono', monospace;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif; /* Assuming 'Oswald' is the primary font for headings */
+    color: #D32F2F;
+}
+

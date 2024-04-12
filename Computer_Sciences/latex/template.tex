@@ -1,0 +1,88 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Class}\\Sub}
+\author{\huge{Name}}
+\date{}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+
+\begin{verbatim}
+	beg = \begin{document} ... \end{document}
+	mk = \(\)
+	sub = base_index
+	sup = base^{:exponent}
+	sr = ^2
+	cb = ^3
+	compl = ^{c}
+	frac = \frac{numerator}{denominator}
+	bar = \overline{variable}
+	hat = \hat{variable}
+	vec = \vec{variable}
+
+
+\end{verbatim}
+
+
+
+\dfn{title}{content} = définition
+
+\sol = solution
+
+\nt = note
+
+\begin{note}     
+\end{note}   
+
+\clm{title}{}{content} = claim
+
+\ex{title}{content} = example
+
+\thm{title}{content} = thm
+
+\begin{myproof} = proof
+\end{myproof}
+
+Utilisation de tikzpicture
+
+\cor{title}{content} = corrollary
+
+\mlenma{title}{content} : lemme
+
+\mprop{title}{content} : proposition
+
+numéroter les equations : \begin{enumerate} \item\label{n:1}\end{enumerate}
+
+\qs{}{content}
+
+
+\begin{algorithm}
+\KwIn{input}
+\KwOut{output}
+\SetAlgoLined
+\SetNoFillComment
+\tcc{This is a comment}
+\tcp*{}
+\uIf{content}{}
+\Else{content}
+\ForEach{}{}
+\For{}{}
+\While{}{}
+\Return something
+\caption{title of the algo}
+\end{algorithm}
+
+
+
+\end{document}
