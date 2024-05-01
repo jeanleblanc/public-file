@@ -1,0 +1,515 @@
+\chapter{Annexe : Exercices}
+
+\section*{Exercices chapitre 1}
+
+\qs{Trying error}{
+\begin{enumerate}
+\item In a print statement, what happens if you leave out one of the parentheses, or both?
+\item If you are trying to print a string, what happens if you leave out one of the quotation marks,
+or both?
+\item You can use a minus sign to make a negative number like -2. What happens if you put a plus
+sign before a number? What about 2++2?
+\item In math notation, leading zeros are ok, as in 09. What happens if you try this in Python?
+What about 011?
+\item What happens if you have two values with no operator between them?
+\end{enumerate}
+}
+\sol 
+\begin{enumerate}
+\item Leaving out one or both parentheses in a \texttt{print} statement will result in a \texttt{SyntaxError}.
+\item Omitting one or both quotation marks around a string will cause a \texttt{SyntaxError}.
+\item Using a plus sign before a number has no effect (e.g., \texttt{+2} is the same as \texttt{2}). \texttt{2++2} raises a \texttt{SyntaxError} because the double plus is invalid syntax.
+\item Leading zeros in integer literals are not allowed in Python 3. Both \texttt{09} and \texttt{011} will raise a \texttt{SyntaxError}.
+\item Having two values with no operator between them (like \texttt{2 2}) will result in a \texttt{SyntaxError}.
+\end{enumerate}
+
+\qs{Python as a calculator}{
+\begin{enumerate}
+\item How many seconds are there in 42 minutes 42 seconds?
+\item How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
+\item If you run a 10 kilometer race in 42 minutes 42 seconds, what is your average pace (time per
+mile in minutes and seconds)? What is your average speed in miles per hour
+\end{enumerate}
+}
+
+\sol \begin{verbatim}
+#1 
+print(42*60 + 42)
+#2 
+print(1/1.6*10)
+#3
+print("time per miles in second :", (42*60 + 42)/10, "in minutes : " (42 + 42/60)/10, "average speed : "10/((42+42/60)/60))
+\end{verbatim}
+
+\section*{Exercices chapitre 2}
+\qs{Trying error}{
+\begin{enumerate}
+\item We’ve seen that n = 42 is legal. What about 42 = n?
+\item How about x = y = 1?
+\item In some languages every statement ends with a semi-colon, ;. What happens if you put a semi-colon at the end of a Python statement?
+\item What if you put a period at the end of a statement?
+\item In math notation you can multiply x and y like this: xy. What happens if you try that in
+\end{enumerate}
+}
+
+\sol 
+\begin{enumerate}
+    \item \texttt{42 = n} is illegal in Python. It raises a \texttt{SyntaxError} because the left side of an assignment must be a variable name, not a literal value.
+    \item \texttt{x = y = 1} is legal in Python. It assigns the value \texttt{1} to both \texttt{x} and \texttt{y} variables.
+    \item Putting a semicolon (\texttt{;}) at the end of a Python statement is allowed but not required. It has no effect on the statement's execution.
+    \item Placing a period (\texttt{.}) at the end of a statement will cause a \texttt{SyntaxError} because it is not valid Python syntax.
+    \item Trying to multiply variables like \texttt{xy} in Python will raise a \texttt{NameError} because Python interprets it as a single variable name, not as multiplication. Use \texttt{x * y} instead.
+\end{enumerate}
+
+\qs{Python as a Calculator (script)}{
+\begin{enumerate}
+\item The volume of a sphere with radius \(r\)  is \(\frac{4}{3}\pi r^3\) . What is the volume of a sphere with radius 5?
+\item Suppose the cover price of a book is 24.95 dollars, but bookstores get a 40\% discount. Shipping costs
+3 dollars for the first copy and 75 cents for each additional copy. What is the total wholesale cost for
+60 copies?
+\item If I leave my house at 6:52 am and run 1 mile at an easy pace (8:15 per mile), then 3 miles at
+tempo (7:12 per mile) and 1 mile at easy pace again, what time do I get home for breakfast?
+\end{enumerate}
+}
+\sol
+\begin{verbatim}
+#1
+r = 5
+volume = 4/3 * 3.14 * r**3
+print(volume)
+
+#2
+cp = 24.95
+dis = 40/100
+sc_1 = 3
+sc_2 = 0.75
+n = 60
+
+total_cost = n*cp*dis + sc_1 + (n-1)*sc_2
+
+print(total_cost)
+
+#3
+leave = 6*60 + 52
+d1 = 2
+d2 = 3
+v1 = 8 + 15/60
+v2 = 7 + 12/60
+
+eta = (leave + d1*v1 + d2*v2)/60
+
+print(eta)
+\end{verbatim}
+
+\section*{Exercices chapitre 3}
+
+\qs{}{
+Write a function named \texttt{right\_justify} that takes a string named s as a parameter
+and prints the string with enough leading spaces so that the last letter of the string is in column 70
+of the display.\\
+Hint: Use string concatenation and repetition. Also, Python provides a built-in function called len
+that returns the length of a string, so the value of \texttt{len('monty')} is 5.
+}
+
+\begin{verbatim}
+>>> right_justify('monty')
+                                monty
+\end{verbatim}
+
+\sol
+
+\begin{verbatim}
+def right_justify(s):
+    print(" "*70+s)
+    
+right_justify("test")__
+\end{verbatim}
+
+\qs{}{
+A function object is a value you can assign to a variable or pass as an 
+argument. For
+example, \texttt{do\_twice} is a function that takes a function object as an 
+argument and calls it twice.\\
+\begin{enumerate}
+\item Type this example into a script and test it.
+\item Modify \texttt{do\_twice} so that it takes two arguments, a function object and a value, and calls the
+function twice, passing the value as an argument.
+\item Copy the definition of \texttt{print\_twice} from earlier in this chapter to your script.
+\item Use the modified version of \texttt{do\_twice} to call \texttt{print\_twice} twice, passing 'spam' as an
+argument.
+\item Define a new function called \texttt{do\_four} that takes a function object and a value and calls the
+function four times, passing the value as a parameter. There should be only two statements in
+the body of this function, not four.
+\end{enumerate}
+}
+
+\begin{verbatim}
+def do_twice(f):
+    f()
+    f()
+
+# use example
+def print_spam():
+    print("spam")
+
+do_twice(print_spam)
+\end{verbatim}
+
+\sol
+\begin{enumerate}
+    \item 
+\begin{verbatim}
+    > spam
+      spam
+\end{verbatim} 
+    \item
+\begin{verbatim}
+def do_twice(f, text):
+    f(text)
+    f(text)
+
+def print_spam(text):
+    print(text)
+
+do_twice(print_spam, "try")
+\end{verbatim}
+    \item voir 4.
+    \item 
+\begin{verbatim}
+def do_twice(f, text):
+    f(text)
+    f(text)
+
+def print_twice(text):
+    print(text)
+    print(text)
+
+do_twice(print_twice, "tentative") 
+\end{verbatim}
+    \item
+\begin{verbatim}
+def do_two(f, val):
+    f(val)
+    f(val)
+ 
+def do_four(f, val):
+    do_two(f, val)
+    do_two(f, val)
+
+do_four(print, "valeur")
+\end{verbatim}
+\end{enumerate}
+
+\qs{}{
+    \nt{
+    This exercise should be done using only the statements and other features we
+have learned so far.
+    }
+    
+\begin{enumerate}
+    \item Write a function that draws a grid like the following.\\
+    \item Write a function that draws a similar grid with four rows and four columns.
+   
+\end{enumerate}
+}
+
+\begin{verbatim}
+# for point 1 : 
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+|         |         |
+|         |         |
+|         |         |
+|         |         |
++ - - - - + - - - - +
+\end{verbatim}
+
+\sol
+\begin{verbatim}
+def line(n):
+    print("+ - - - -"*n,"+")
+
+def space(n):
+    print("|        "*n, "|")
+    print("|        "*n, "|")
+    print("|        "*n, "|")
+
+def print_grid(n):
+    line(n), space(n)
+    line(n), space(n)
+    line(n), space(n),line(n)
+    
+print_grid(3)
+\end{verbatim}
+
+
+\section*{Exo 4}
+\subsection*{4.3}
+\qs{}{
+Write a function called square that takes a parameter named t, which is a turtle. It
+should use the turtle to draw a square.\\
+Write a function call that passes bob as an argument to square, and then run the
+program again.
+}
+\sol 
+\begin{verbatim}
+import turtle 
+
+boss = turtle.Turtle()
+
+def square(t):
+    for i in range(4):
+        t.fd(100)
+        t.rt(90)
+        
+        
+square(boss)
+\end{verbatim}
+
+\qs{}{
+Add another parameter, named length, to square. Modify the body so length of the
+sides is length, and then modify the function call to provide a second argument. Run
+the program again. Test your program with a range of values for length.
+}
+
+\sol 
+\begin{verbatim}
+import turtle 
+
+boss = turtle.Turtle()
+
+def square(t, length):
+    for i in range(4):
+        t.fd(length)
+        t.rt(90)
+        
+        
+square(boss, 30)
+\end{verbatim}
+
+\qs{}{
+ Make a copy of square and change the name to polygon. Add another parameter
+named n and modify the body so it draws an n-sided regular polygon. Hint: The
+exterior angles of an n-sided regular polygon are 360/n degrees.
+}
+
+\sol
+\begin{verbatim}
+import turtle 
+
+boss = turtle.Turtle()
+
+def polygone(t, length, n):
+    for i in range(n):
+        t.fd(length)
+        t.rt(360/n)
+        
+        
+polygone(boss, 30, 5)
+\end{verbatim}
+
+\qs{}{
+Write a function called circle that takes a turtle, t, and radius, r, as parameters and
+that draws an approximate circle by calling polygon with an appropriate length and
+number of sides. Test your function with a range of values of r.
+Hint: figure out the circumference of the circle and make sure that length * n =
+circumference.
+}
+\sol
+\begin{verbatim}
+import turtle
+import math
+
+boss = turtle.Turtle()
+
+def polygone(t, length, n):
+    for i in range(n):
+        t.fd(length)
+        t.rt(360/n)
+        
+def circle(t,  r):
+   polygone(t, 2 * math.pi*r / 300, 300) 
+   
+circle(boss, 30)
+\end{verbatim}
+\qs{}{
+Make a more general version of circle called arc that takes an additional parameter
+angle, which determines what fraction of a circle to draw. angle is in units of degrees,
+so when angle=360, arc should draw a complete circle.
+}
+
+\sol 
+\begin{verbatim}
+import turtle
+import math
+
+boss = turtle.Turtle()
+
+def polygone(t, length, n, angle):
+    for i in range(int(n/(360/angle))):
+        t.fd(length)
+        t.rt(360/n)
+        
+def arc(t,  r, angle):
+   polygone(t, 2*math.pi*r/300, 300, angle)
+   
+arc(boss, 30, 90)
+\end{verbatim}
+\subsection*{4.12}
+
+
+\qs{}{
+\begin{enumerate}
+    \item Draw a stack diagram that shows the state of the program while executing circle(bob,
+radius). You can do the arithmetic by hand or add print statements to the code.
+    \item The version of arc in Section 4.7 is not very accurate because the linear approximation of the
+circle is always outside the true circle. As a result, the Turtle ends up a few pixels away from
+the correct destination. My solution shows a way to reduce the effect of this error. Read the
+code and see if it makes sense to you. If you draw a diagram, you might see how it works
+\end{enumerate}}
+\sol  trivial
+
+\qs{}{
+    Write an appropriately general set of functions that can draw flowers as in Figure 4.1.
+}
+\sol 
+\begin{verbatim}
+    import math
+    import arc
+    import turtle
+    
+    def petal(t, r, angle):
+        for i in range(2):
+            arc(t, r, angle)
+            t.rt(180-angle)
+    
+    def flower(t, n, r, angle):
+        for i in range(n):
+            petal(t, r, angle)
+            t.rt(360.0/n)
+    
+    def move(t, lenght)
+        t.pu()
+        t.fd(lenght)
+        t.pd()
+\end{verbatim}
+\qs{}{
+Write an appropriately general set of functions that can draw shapes as in Figure 4.2.
+} 
+\sol 
+\begin{verbatim}
+import math
+import turtle
+t = turtle.Turtle()
+
+def triangle(t, r, angle):
+    y = r*math.sin(angle*math.pi/180)
+
+    t.rt(angle)
+    t.fd(r)
+    t.lt(angle + 90)
+    t.(2*y)
+    t.(angle + 90)
+    t.fd(r)
+    t.lt(180- angle)
+
+def polygone(t, r, n):
+    angle = 360.0/n
+
+    for i in range(n):
+        triangle(t, r, angle/2)
+        t.lt(angle)
+
+polygone(t, 100, 10)
+\end{verbatim}
+
+\qs{}{
+The letters of the alphabet can be constructed from a moderate number of basic ele-
+ments, like vertical and horizontal lines and a few curves. Design an alphabet that can be drawn
+with a minimal number of basic elements and then write functions that draw the letters
+}
+\sol
+\begin{verbatim}
+    import math
+import turtle
+t= turtle.Turtle()
+t.hideturtle()
+
+   
+
+# turtle point vers droite initialement 
+def slash(t):
+    t.lt(70)
+    t.fd(100)
+    t.lt(180)
+    t.fd(100)
+    t.lt(110)
+
+def back_slash(t):
+    t.lt(110)
+    t.fd(100)
+    t.lt(180)
+    t.fd(100)
+    t.lt(70)
+
+def up_hline(t):
+   t.lt(90) 
+   t.pu()
+   t.fd(100)
+   t.pd()
+   t.rt(90)
+   t.fd(100)
+   t.lt(180)
+   t.fd(100)
+   t.lt(90)
+   t.pu()
+   t.fd(100)
+   t.pd()
+   t.lt(90)
+
+def down_hline(t):
+   t.fd(100)
+   t.lt(180)
+   t.fd(100)
+   t.lt(180)
+
+def mid_hline(t):
+   t.lt(90) 
+   t.pu()
+   t.fd(50)
+   t.pd()
+   t.rt(90)
+   t.fd(100)
+   t.bk(100)
+   t.lt(90)
+   t.pu()
+   t.fd(50)
+   t.pd()
+   t.lt(90)
+
+def hline(t):
+   t.lt(90)
+   t.fd(100)
+   t.bk(100)
+   t.rt(90)
+def A(t):
+   slash(t)
+   t.pu()
+   t.fd(72)
+   t.pd()
+   back_slash(t)
+   t.pu()
+   t.bk(72)
+   t.pd()
+   mid_hline(t)
+
+def E(t):
+
+A(t)
+
+turtle.done()
+\end{verbatim}

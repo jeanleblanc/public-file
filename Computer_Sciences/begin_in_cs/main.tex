@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{fancyhdr} 
+\usepackage{lipsum}  
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+
+% Title
+\pagestyle{fancy}
+\fancyhf{} 
+\renewcommand{\headrulewidth}{0pt} \fancyhead[C]{Spring 2024 \hfill  \Large \textbf{Introduction to Computer Science}  \hfill \normalsize Jean Aboutboul} 
+
+% Command references
+\newcommand{\myreference}[2]{
+  \item \textcolor{black}{#1} \ifx&#2&\else \href{#2}{\textcolor{blue}{\textit{#2}}}\fi
+}
+
+\begin{document}
+L'informatique ne se résume pas seulement à la programmation, loin de là. \\
+Personnellement, je la divise en quatre catégories pour une introduction : \\
+\begin{enumerate}
+\item Science des ordinateurs
+\item Programmation
+\item Mathématiques et intelligence artificielle
+\item Outils informatiques et systèmes d'exploitation
+\end{enumerate}
+
+Avant de commencer, un excellent premier exercice serait d'installer VSCode,
+Python, de configurer VSCode pour Python et d'exécuter le code suivant :
+\begin{verbatim}
+print("Hello, world !")
+\end{verbatim}
+L'intérêt de cette démarche est de le faire sans avoir la moindre idée de comment procéder,
+en recherchant simplement sur Internet et en se débrouillant par soi-même.
+
+Ensuite, un autre exercice intéressant serait d'installer WSL (Ubuntu),
+de télécharger Python et d'exécuter le même code dans le terminal.
+Parallèlement, il est judicieux d'apprendre les bases de l'utilisation du terminal.
+Rien de vraiment compliqué, juste regarder \href{https://kinsta.com/blog/linux-commands/}{ces commandes}, apprendre à les utiliser et
+en faire une habitude.
+
+Un troisième exercice, toujours dans la même veine, serait d'installer Linux sur son ordinateur.
+Il est toutefois conseillé de faire au préalable une sauvegarde externe (en ligne ou sur un disque dur externe) de
+ses fichiers, car l'installation peut parfois mal se dérouler.\\
+Voici quelques distributions Linux recommandées pour une première installation :
+\begin{itemize}
+\item Linux Mint
+\item Ubuntu
+\item Manjaro (basée sur Arch, à réserver aux utilisateurs un peu plus à l'aise)
+\item Pop! OS
+\item ... 
+\end{itemize}
+Personnellement, je recommande Mint avec l'environnement de bureau Cinnamon.\\
+
+\textbf{Il est crucial, en réalisant ces exercices, de comprendre chaque étape
+et non de simplement copier aveuglément ce que l'on trouve en ligne.}
+\section{Science des ordinateurs}
+La science des ordinateurs consiste simplement à comprendre le fonctionnement d'un ordinateur.
+Qu'est-ce que le matériel, comment chaque composant fonctionne, qu'est-ce que la programmation...\\
+
+Sans aucun doute, la meilleure introduction possible est la série \href{https://www.youtube.com/watch?v=tpIctyqH29Q&list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo}{Crash Course Computer Science}.\\
+Il est conseillé de prendre des notes, car tous les concepts ne sont pas nécessairement évidents.\\
+
+Malheureusement, bien que cette série soit une excellente source d'information, elle ne peut
+pas être considérée comme un \textit{cours} parfait, car elle ne propose pas d'exercices. Je suis d'avis
+que si l'on ne s'exerce pas, si l'on se contente "d'ingérer" l'information sans la "restituer",
+on n'apprend pas réellement. Je suggère donc de fournir le texte de la vidéo à
+ChatGPT, Claude (ou une autre IA) et de lui demander de générer quelques questions.
+
+\section{Programmation}
+La programmation est l'art d'écrire des programmes informatiques
+dans le but d'accomplir une tâche spécifique.\\
+
+Le langage généralement recommandé pour débuter est \textbf{Python}, et ce
+pour plusieurs raisons : Python est très polyvalent, c'est
+l'un des langages les plus populaires, bénéficiant ainsi d'une multitude de
+ressources en ligne et de communautés pour obtenir de l'aide. De plus, Python
+possède une syntaxe extrêmement simple, comme on peut le constater dans l'exemple de code
+ci-dessus. Ce n'est pas le cas de tous les langages. Par exemple, en C,
+voici comment obtenir le même résultat :
+\begin{verbatim}
+#include <stdio.h>
+
+main()
+{
+printf("Hello, World !\n");
+}
+\end{verbatim}
+
+Pour Python, je recommande vivement le livre \href{https://greenteapress.com/thinkpython2/thinkpython2.pdf}{Think Python}, qui est excellent et disponible gratuitement (et légalement).
+Cependant, si tu préfères commencer avec un autre langage, tu peux essayer :
+\begin{itemize}
+\item \href{https://www.youtube.com/playlist?list=PLZPZq0r_RZOMhCAyywfnYLlrjiVOkdAI1}{Java} (Mouais)
+\item \href{https://developer.mozilla.org/fr/}{JavaScript} (Si t'es une femme aesthetic mais alors il faut faire CSS et HTML avec)
+\item \href{https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628}{C} (pour les bonom)
+\item \href{https://www.oreilly.com/library/view/think-julia/9781492045021/}{Julia} (pour les math) et \href{https://www.lua.org/pil/contents.html}{Lua} (pour faire le mec différent) ont des syntaxes abordables.
+\item ... en réalité, tous les langages fonctionnent
+\end{itemize}
+
+La programmation étant une compétence pratique, l'essentiel est de s'exercer. Le
+livre sur Python propose des exercices, fais-les !\\
+Il est également important de savoir mener un projet de A à Z, ce qui diffère
+de la simple résolution d'exercices. Je considère qu'on maîtrise
+un langage de programmation après avoir réalisé 5 projets (de complexité croissante).\\
+Pour trouver des idées de projets, il suffit de chercher "projets Python" sur YouTube.\\
+Les projets de groupe sont aussi très formateurs. Au début, cela peut sembler ardu,
+voire insurmontable. On peut alors commencer par regarder et reproduire des projets
+réalisés par d'autres sur YouTube (cherche "apprendre Python en un projet"), en portant attention
+à la façon de procéder et de structurer le code. Lire le code d'autres personnes
+(ayant fait ou non la même chose que nous) sur GitHub par exemple, est aussi très instructif
+et permet de découvrir différentes approches.
+
+\section{Mathématiques et IA}
+Bien que cela ne soit pas indispensable pour une introduction, les notions abordées dans le livre
+\href{https://www.amazon.com/Basic-Mathematics-Serge-Lang/dp/0387967877}{Basic Mathematics de Serge Lang} me semblent être des prérequis nécessaires.
+
+\section{Outils informatiques et systèmes d'exploitation}
+Il s'agit ici d'apprendre le fonctionnement d'un système d'exploitation (UNIX) ainsi que d'autres
+outils informatiques (Tous les \textit{gadgets} que tu utilises sur ton ordinateur).\\
+
+Pour les systèmes d'exploitation, je conseille de :
+lire le chapitre "The Unix System" du livre \textit{The C Programming Language} (lien plus haut)\\
+ainsi que le livre \href{https://www.amazon.com/How-Linux-Works-Brian-Ward/dp/1718500408}{How Linux Works}.
+
+C'est aussi toujours intéressant d'apprendre à utiliser : \\
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=-txKSRn0qeA}{VIM}, un éditeur de texte permettant une navigation rapide
+\item \href{https://wiki.archlinux.org/title/archinstall}{Arch}, une distribution Linux plus avancée
+\item \href{https://www.youtube.com/watch?v=hwP7WQkmECE}{Git et GitHub} pour la gestion de versions de code
+\item \href{https://www.youtube.com/watch?v=-MXwHMHfF8k}{Markdown} et \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{LaTeX} pour la rédaction de documents
+\end{itemize}
+
+\section{Time line}
+Proposition, à varier si necessaire : \\
+Encore une fois, le but est de rester constant, et de faire un peu tous les jours.\\
+\begin{itemize}
+  \item Essaye d'abors d'installer vscode et python (comme expliquer tout au dessus) quand t'es déjà à l'aise avec
+  l'utilisation de vscode, alors tu peux install WSL, puis quand t'es a l'aise avec le terminal alors t'install linux.
+  \item Crash Course : 1 vidéo tous les deux jours, l'autre jours en faire un résumé au propre (profite en pour 
+  apprendre MarkDown et faire ton résumé avec, c'est super simple. Utilise mark down dans vscode). Note et resous aussi 
+  les quesitons.
+  \item Essaye de Faire 1 chapitre par semaine du livre sur Python, tout en faisant les exercices. Sauvegarde ta resolution 
+  des exercices. Une fois que t'as fini le livre, trouve une video projet et fait la. Ensuite, soit t'as pleins d'idées de projet
+  et alors fait toi un plan de comment y arriver, et fait le (très important de finir ses projet, faire que la moitier c'est inutile).
+  Si t'as pas d'idée va voir sur yt
+  \item Je dirais que 1 chapitre de math par semaine me semble faisaible, surtout que le premier devraient aller très vite.
+  très important aussi de faire les exercices dans le livre. (peut être pas tous parce que il y'en a vraiment beaoucp mais au moins 
+  la pluspart.
+  \item pour les autres trucs, c'est vraiment comme tu veux, si tu vois d'autres choses que tu veux apprendre vasy
+  moi j'adore les trucs que je t'ai mis parce que je les utilise tout le temps, mais c'est pas necessaire (peut être latex l'est et github aussi)
+\end{itemize}
+\section{Médias}
+\begin{itemize}
+    \item \href{https://www.youtube.com/@codebh}{codebh}
+    \item \href{https://www.youtube.com/@aiexplained-official}{AI Explained}
+    \item \href{https://www.youtube.com/@cocadmin}{cocadmin}
+    \item \href{https://www.youtube.com/@CodeBullet}{Code Bullet}
+    \item \href{https://www.youtube.com/@Fireship}{Fireship}
+    \item \href{https://www.youtube.com/@hackintux5813}{hackintux}
+    \item \href{https://www.youtube.com/@jamesbruton}{James Bruton}
+    \item \href{https://www.youtube.com/@Micode}{Micode}
+    \item \href{https://www.youtube.com/@Underscore_}{Underscore\_}
+    \item \href{https://www.youtube.com/@V2F}{V2F}
+    \item \href{https://www.youtube.com/@veritasium}{Veritasium}
+\end{itemize}
+\end{document}

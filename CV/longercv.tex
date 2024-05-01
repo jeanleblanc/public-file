@@ -1,0 +1,322 @@
+
+
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2015 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{enumitem}
+
+% The following two lines are needed to fix a MacTex compatibility issue
+% Thanks to Tony Blake for finding this fix!
+\usepackage{etoolbox}
+\robustify\cftdotfill
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Jean Aboutboul} & \textbf{\today} \\
+Microtechnical Engineering Student & jean.aboutboul@epfl.ch \\
+Brussels, Belgium & jeanaboutboul@gmail.com \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item
+	\ressubheading{École Polytechnique Fédérale de Lausanne (EPFL)}{Lausanne, Switzerland}{B.Sc. Mechanical Engineering}{2023-}\\
+\begin{itemize}
+\item \textbf{Ba1}  : Analyse I, Algèbre linéaire, Physique mécanique, Chimie des matériaux, Science et technologie de l'électricité, Construction mécanique
+\item \textbf{Ba2}  : Analysis 2 (en anglais), Physique thermodynamique, Mechanical structure (en anglais), Informatique (théorie et programmation), Enjeux mondiaux : Communication (autour de l'IA), Projet de construction mécanique
+\end{itemize}
+
+
+\item
+	\ressubheading{Ecole Decroly}{Brussels, Belgium}{Ecole Secondaire}{2017-2023}\\
+\vspace{0.25cm}
+\textbf{Diplôme d'Enseignement Secondaire Supérieur (CESS),} Orientation Mathématiques (6h) et Sciences (7h) \\
+Moyenne générale : 80,4\%\\
+Résultats notables :
+\begin{itemize}
+\item Mathématiques (6h) : 92,5\%
+\item Physique (3h) : 88,5\%
+\item Biologie (2h) : 90\%
+\item Philosophie renforcée (2h, cours supplémentaire) : 82,5\%
+\end{itemize}
+\textbf{Diplôme du Premier Degré de l'Enseignement Secondaire (CE1D)} \\
+Moyenne générale : 86\%\\
+Résultats notables : Mathématiques (93\%), Sciences (88\%), Français (82\%), Néerlandais (79\%)\\
+
+\item \ressubheading{Ecole Hamaïde}{Brussels, Belgium}{Ecole Primaire}{2011-2017}\\
+\vspace{0.25cm}
+Diplôme du Certificat d'Études de Base (CEB)\\
+Moyenne générale : 95\%\\
+Résultats notables :
+\begin{itemize}
+\item Mathématiques (grandeurs, nombres et opérations, solides et figures) : 100\%
+\item Éveil (initiation scientifique) : 96\%
+\item Français (écouter, écrire, lire fictionnel) : 93\%
+\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Personal Statement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{center}
+  \parbox{6.762in}{
+    \include{aboutme.tex}
+  }
+  \end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Work Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}[label={}]
+\item \ressubheading{Ajinomatrix}{Brussels}{Stage en Entreprise}{2 semaines}
+\begin{itemize}[label={}]
+\item Stage auprès de François Wayenberg, PDG et fondateur d'Ajinomatrix, une entreprise pionnière dans le développement de logiciels de mesure sensorielle utilisant l'intelligence artificielle
+\item Découverte des activités de l'entreprise, qui propose des solutions innovantes pour interpréter les mesures sensorielles du goût et de l'odorat à l'aide de l'IA, en collaboration avec des consommateurs, des panels de juges de dégustation et des capteurs tels que des nez et des bouches électroniques
+\item Ajinomatrix, fondée dans les années 2000, s'est développée à partir d'une application spécifique pour devenir une plateforme open source offrant une large gamme de services visant à simplifier la vie des utilisateurs et à révolutionner l'industrie sensorielle
+\item Le fondateur, François Wayenberg, possède une expérience de plusieurs années dans la R\&D alimentaire au sein d'une grande entreprise japonaise, ainsi qu'une expertise dans des projets de pointe en collaboration avec la NASA et des projets expérimentaux avancés en Israël. Il est également auteur, poète, cinéaste, inventeur et entrepreneur en série.
+\end{itemize}
+
+\item \ressubheading{Pianist Accompagnateur}{}{}{}
+\begin{itemize}[label={}]
+\item Accompagnement musical lors de divers événements et cérémonies
+\end{itemize}
+
+\item \ressubheading{Chef d'un mouvement de jeunesse, JJL}{Brussels}{}{2 ans}
+\begin{itemize}[label={}]
+\item Encadrement et animation d'activités pour les jeunes
+\item Développement de compétences en leadership et en gestion d'équipe
+\end{itemize}
+
+\item \ressubheading{Travail en restaurant étoilé "Canne en Ville"}{Brussels}{}{}
+\begin{itemize}[label={}]
+\item Expérience en restauration haut de gamme
+\item Développement de compétences en service clientèle et en travail d'équipe dans un environnement exigeant
+\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Technical Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ressubheading{Logiciels de conception et de modélisation}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item CATIA : Compétences apprise première année d'université
+\item Fusion 360 : compétences de base
+\item Blender : compétences de base
+\end{itemize}
+
+\ressubheading{Programmation et développement}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item \LaTeX : niveau très avancé (appris sur internet, notamment avec les tutoriels Overleaf et des vidéos YouTube)
+\item Langages de programmation : Bash, Python, Julia, C, HTML, CSS, JavaScript, JSON
+\item Théorie de l'informatique : connaissances acquises via le cours "Crash Course Computer Science" sur YouTube, des cours universitaires de l'EPFL et de Berkeley en ligne, et le livre "Introduction à la théorie de la computation" de Michael Sipser
+\item Linux : maîtrise du système d'exploitation (4 ans d'expérience utilisateur, connaissances approfondies grâce au livre "How Linux Works" de Brian Ward)
+\item Base de données : compétences de base en SQL
+\item Outils de développement : Git, GitHub/GitLab, Markdown, Vim, Neovim, Manim
+\end{itemize}
+
+\ressubheading{Intelligence Artificielle}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item Machine Learning : compétences de base (références principales : spécialisation "Machine Learning" sur Coursera par Stanford et Andrew Ng, cours de 3Blue1Brown sur YouTube)
+\end{itemize}
+\ressubheading{Musique}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item Piano : compétences avancées
+\item Théorie musicale : compétences avancées (références principales : musictheory.net et "Jazz Theory" de Mark Levine)
+\item Logiciel de production musicale : compétences de base sur Logic Pro
+\end{itemize}
+
+\ressubheading{Graphisme et créativité}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item Suite Adobe Creative Cloud : compétences de base
+\item Procreate : compétences de base
+\end{itemize}
+
+\ressubheading{CONNAISSANCES SCIENTIFIQUES COMPLÉMENTAIRES}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item \textbf{Mathématiques}
+\begin{itemize}[label={}]
+\item Théorie des graphes : "Graph Theory" de Reinhard Diestel
+\item Mathématiques concrètes : "Concrete Mathematics" de Ronald Graham
+\item Statistiques et analyse de données : "Mathematical Statistics and Data Analysis" de John Rice
+\item Réflexion mathématique : "Thinking About Math" de Shapiro
+\end{itemize}
+\item \textbf{Physique}
+\begin{itemize}[label={}]
+\item Cosmologie : cours de cosmologie par Aurélien Barrau sur YouTube, "Cosmos" de Carl Sagan
+\item Mécanique quantique : "Introduction to Quantum Mechanics" de David Griffiths
+\item Espace-temps et géométrie : "Spacetime and Geometry" de Sean Carroll
+\end{itemize}
+
+\item \textbf{Neurosciences et biologie}
+\begin{itemize}[label={}]
+\item Neurosciences : "Neuroscience: Exploring the Brain" de Mark Bear (fondation)
+\item Biologie : "Campbell's Biology"
+\end{itemize}
+\end{itemize}
+
+Je tiens à souligner que je ne considère aucune de mes compétences comme définitivement acquise. 
+Je suis conscient qu'il y a toujours de la place pour l'amélioration et l'approfondissement des connaissances.\\
+De plus, comme mentionné dans la section "À propos de moi", 
+j'ai une véritable passion pour l'apprentissage. Je suis donc 
+tout à fait disposé et enthousiaste à l'idée d'acquérir de 
+nouvelles compétences ou d'améliorer celles que je possède déjà, 
+dans n'importe quel domaine qui serait nécessaire ou souhaité pour mener à bien les projets 
+qui me seront confiés.\\
+
+%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projets}
+%%%%%%%%%%%%%%%%%%%%%
+
+\ressubheading{Projets Académiques}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item \textbf{Conception d'un treuil de forage mécanique (CATIA)}
+\begin{itemize}
+\item Conception complète d'un treuil de forage mécanique sur CATIA, de la modélisation 3D aux calculs physiques
+\item Compétences développées : conception mécanique, modélisation 3D, analyse de forces et de contraintes
+\end{itemize}
+
+\item \textbf{Création d'un poster sur une problématique liée à l'intelligence artificielle}
+\begin{itemize}
+\item Réalisation d'un poster scientifique présentant une problématique spécifique dans le domaine de l'IA
+\item Compétences développées : synthèse d'informations, communication scientifique, vulgarisation
+\end{itemize}
+
+\item \textbf{Olympiades nationales de physique}
+\begin{itemize}
+\item Participation aux Olympiades nationales de physique, un concours mettant en avant les connaissances et la réflexion scientifique
+\item Compétences développées : résolution de problèmes physiques complexes, raisonnement scientifique, gestion du stress
+\end{itemize}
+
+\item \textbf{Projet CanSat}
+\begin{itemize}
+\item Participation au projet CanSat, qui consiste à concevoir, construire et lancer un nano-satellite de la taille d'une canette
+\item Compétences développées : travail d'équipe, gestion de projet, conception de systèmes embarqués, analyse de données
+\end{itemize}
+
+\item\textbf{Création d'un jeu de type "Candy Crush" en langage C}
+\begin{itemize}
+\item Développement d'un jeu inspiré de Candy Crush en utilisant le langage de programmation C
+\item Compétences développées : programmation en C, conception d'algorithmes, gestion de la logique de jeu
+\end{itemize}
+\end{itemize}
+
+\ressubheading{PROJETS PERSONNELS}{}{}{}\\
+\vspace{-0.5cm}
+\begin{itemize}[label={}]
+\item \textbf{JeanFlix : Plateforme personnelle de streaming vidéo}
+\begin{itemize}
+\item Création d'une plateforme de streaming vidéo personnelle, incluant le développement du site web, l'hébergement et la gestion d'une base de données
+\item Compétences développées : développement web (HTML, CSS, JavaScript), gestion de base de données, hébergement web
+\end{itemize}
+
+\item \textbf{Site web CV (portfolio)}
+\begin{itemize}
+\item Création d'un site web vitrine dynamique servant de portfolio en ligne
+\item Compétences développées : développement web (HTML, CSS, JavaScript), design web, hébergement
+\end{itemize}
+
+\item \textbf{Site web sur la musique classique et l'analyse de pièces}
+\begin{itemize}
+\item Développement d'un site web dédié à la musique classique, permettant de publier des analyses de pièces sans avoir à refaire le site
+\item Compétences développées : développement web, rédaction de contenu, analyse musicale, vulgarisation
+\end{itemize}
+
+\item \textbf{Création d'une intelligence artificielle de recommandation musicale}
+\begin{itemize}
+\item Développement d'un système de recommandation musicale basé sur l'intelligence artificielle
+\item Compétences développées : traitement de données, algorithmes de recommandation, apprentissage automatique
+\end{itemize}
+
+\item \textbf{Projets en Python}
+\begin{itemize}
+\item Desktop Cleaner : script pour automatiser le nettoyage et l'organisation des fichiers sur un ordinateur
+\item Web Scraper : outil pour extraire des données à partir de sites web
+\item Budget Tracker : application pour suivre et gérer un budget personnel
+\item Compétences développées : programmation en Python, gestion de fichiers, extraction de données web, manipulation de données
+\end{itemize}
+
+\item \textbf{Projets en C}
+\begin{itemize}
+\item Système de gestion de bibliothèque : application pour gérer les livres, les membres et les emprunts d'une bibliothèque
+\item Système de gestion bancaire : application simulant les opérations bancaires de base (dépôts, retraits, virements)
+\item Calculatrice matricielle : programme pour effectuer des opérations mathématiques sur des matrices
+\item Application de lecture de livres électroniques : logiciel pour lire et gérer des e-books
+\item Guichet automatique bancaire (ATM) : simulation d'un GAB avec fonctionnalités de base
+\item Compétences développées : programmation en C, gestion de données, algorithmique, interfaces utilisateur
+\end{itemize}
+\end{itemize}
+Il est important de noter que les projets présentés ici ne représentent qu'une sélection de mes réalisations. Tous mes projets n'ont pas nécessairement abouti à un succès, mais chacun d'entre eux a été une source d'apprentissage précieuse, me permettant de développer mes compétences et d'apprendre de mes erreurs.\\
+De plus, pour des raisons de confidentialité et de respect de la vie privée, certains projets, notamment ceux réalisés dans un cadre professionnel ou en collaboration avec des tiers, ne sont pas détaillés ou rendus publics dans ce CV.
+\end{document}

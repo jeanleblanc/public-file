@@ -1,0 +1,365 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Programmation }\\Python}
+\author{\huge{Jean A. Aboutboul}}
+\date{Spring 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+\chapter{The Way of the Program}
+
+The most important skill of a computer scientist is \textbf{problem solving}, which is the ability to formulate problems, think creatively about solutions, and express a solution clearly and accurately.
+
+\section{What is a Program?}
+
+\define{A program} is a sequence of instructions that specifies how to perform a computation (mathematical or symbolic). Details differ depending on the language used, but basic instructions are common in every language:
+
+\begin{itemize}
+\item \textbf{input} Get data from outside.
+\item \textbf{output} Display data, save it, send it, etc.
+\item \textbf{math} Perform basic mathematical operations.
+\item \textbf{conditional execution} Check conditions and run the appropriate code.
+\item \textbf{repetition} Perform an action repeatedly, with variations.
+\end{itemize}
+
+\section{Running Python}
+
+Install it:
+
+\begin{verbatim}
+sudo apt install python3.8 python3-pip
+sudo pacman -S python
+...
+python --version # Check the installation
+\end{verbatim}
+
+The \textbf{Python interpreter} is a program that reads and executes Python code.
+
+\begin{verbatim}
+python   # In bash
+python3  # In macOS
+\end{verbatim}
+
+\section{First Program}
+
+\begin{verbatim}
+print("Hello, World!") # Display Hello, World!
+\end{verbatim}
+
+The \textbf{print function} displays a result on the screen. The quotation marks do not appear in the result. The parentheses indicate that "print" is a function (see Chapter 3).
+
+\section{Arithmetic Operators}
+
+\define{Operators} are provided by Python and represent computations:
+
+\begin{itemize}
+\item +
+\item -
+\item $\ast$
+\item /
+\item $\ast\ast$ (exponential; in Python, it is not "\textasciicircum", which is the bitwise XOR operator)
+\end{itemize}
+
+\section{Values and Types}
+
+\define{A value} is a basic thing that a program works with. Values belong to different \textbf{types}:
+
+\begin{itemize}
+\item \textbf{integer} 2, 3, etc.
+\item \textbf{floating-point number} 2.0, 3.42, etc.
+\item \textbf{string} Characters (letters are strung together)
+\end{itemize}
+
+You can ask the computer what type something is:
+
+\begin{verbatim}
+type(2)              # int
+type(2.0)            # float
+type("hello world")  # str
+type("3")            # str (because of the quotation marks)
+\end{verbatim}
+
+\section{Formal vs. Natural Languages}
+
+\define{Natural languages} are the languages people speak. They are not designed by people and have evolved naturally.\\
+\define{Formal languages} are designed by people for specific applications (math, chemistry, etc.). \textbf{Programming languages} are formal languages that have been designed to express computations.\\
+Formal languages tend to have strict \textbf{syntax} that comes in two ways: \textbf{tokens} and \textbf{structure}.\\
+\define{Tokens} are the basic elements of the language. There are legal and non-legal tokens (e.g., \$ is not a legal token in math).\\
+\define{Rules} pertain to the way tokens are combined. There are also legal and illegal ways to arrange tokens (e.g., 3 + = / 5 uses all legal tokens but has an illegal arrangement).\\
+\textbf{Parsing} is the process of figuring out the structure of a statement in a language.\\
+Formal languages provide advantages: lack of ambiguity, redundancy, and literalness.\\
+
+\section{Debugging}
+
+Programmers make mistakes; those mistakes are called \textbf{bugs}, and the process of tracking them is called \textbf{debugging}.
+
+\section{Exercises}
+
+\textbf{Remember}: Test bugs to see what happens.
+
+
+
+
+
+\chapter{Variables, expressions and statements}
+
+\define{A variable} is a name taht refers to a value.
+\section{Assignement statements}
+An assignement statements create a new variables. In python it is very simple 
+\begin{verbatim}
+name = value
+
+temps = 42
+phrase = "hello world"
+\end{verbatim}
+
+\section{Variables names}
+Can be as long as you want, can contain letter and num but  can't beggin
+with a num, we avoid uppercase but its legal, underscore is ok. Also 
+can't use python3 keywords which are : 
+\begin{verbatim}
+False     class      finally   is         return
+None      continue   for       lambda     try
+True      def        from      nonlocal   while
+and       del        global    not        with
+as        elif       if        or         yield
+assert    else       import    pass
+break     except     in        raise
+\end{verbatim}
+
+\section{Expressions and statements}
+\define{An expression} is a combination of value, variables and operators.\\
+When you type an expression at the prompt, the interpreter evaluates it.\\
+\define{A statement} is a unit of code that has an effect.
+
+\section{Script mode}
+In the terminal, when you type python, it enter in 
+\textbf{interactive mode}, which mean that we interact directly with the interpreter.\\
+Script mode consist as saving code in a file called a \textbf{script} and run 
+the interpreter in \textbf{script mode}.\\
+
+Create a file with a \textit{.py} then run it in the terminal
+by using the following : 
+\begin{verbatim}
+./file.py
+
+#may need to make it executable 
+sudo chmod +x file.py
+\end{verbatim}
+
+\textbf{Ordre of operations} : PEMDAS
+
+\section{String operations}
+We can't perform mathematical operations on strings, but there is two exeptions : \\
++ wich perform string concatenation (join strings end to end) and $\ast$ who 
+perform repetition. 
+\begin{verbatim}
+one = "test"
+two = "ok"
+one + two = testok
+
+one * 3 = testtesttest
+\end{verbatim}
+
+\section{Comments}
+\define{Comments} are not that are not read by the interpretor.\\
+In python it use the symbold \# and everything after will be a comment.
+
+\section{Debugging}
+Three kin of errors can occus in a program : 
+\begin{itemize}
+    \item \textbf{Syntax error} refers to structure and rules of a program.
+    \item \textbf{Runtime error}, error that does not appear until after the program has
+    started running. Called exceptions.
+    \item \textbf{Semantic error} are related to the meaning, the program will 
+    run but not do what is expect.
+\end{itemize}
+\section{Exercices}
+nothing really intersting
+
+\chapter{Functions}
+\define{A function} (in the context of programming) is 
+a named sequence of statement that performs a computation.\\
+Define a fuction : specify the name and the sequence of statement.
+
+\section{Function calls}
+\define{The argument} is the expression in parentheses.
+\begin{verbatim}
+type(42) > int
+int(42.0) > 42
+...
+\end{verbatim}
+\section{Math function}
+\define{A module is a file that contains a collection of related functions}.\\
+Python provide a math module.\\
+Before we can use a module we need to \textbf{import} it. Then
+to acces the functions you have to specify the name of the module
+and the name of the function separated by a dot.
+\begin{verbatim}
+import math
+
+radian = 2 * math.pi
+height = math.sin(radian)
+testvalue = math.log10(3) #default is e
+
+test2 = math.sqrt(2)
+\end{verbatim}
+
+\section{Adding new functions}
+\textbf{A functions definition} specifies the name of a new function
+and the sequence of statement that run when the function is called.\\
+
+def is a keyword that indicates that this is a function def. Emtpy 
+parenthesis indicate that the function does not take any argument. The 
+first line is the \textbf{header} and has to finish with a parenthesis. The 
+rest is called the \textbf{body}. To end the function you have to enter an empty line.
+
+\begin{verbatim}
+def print_lyrics():         #header
+    print("I'm cold")       #body
+    print("but its ok")
+                            #empty line
+\end{verbatim}
+Defining a function creates a function object, which has type function.\\
+The syntax for calling a created function is the same as for built-in function.\\
+
+If you define a function, the definition will be read as any other statement 
+in the programme, but the effect is to create function objects. The body, in the 
+oder hand, will not be read (and execute) until the function is called.\\
+\define{The flow of execution} is the oreder statement run in.
+Execution allways begins at the first statement of the program and run every 
+statement, one at a time, in order from top to bottom. But as a function
+pass few statement (the body) but can go back to it later in the program.
+
+\section{Parametres and arguments}
+Some function require one ore more argument. Inside the function
+the argument are assigned to variables called \textbf{parameters}.
+
+\begin{verbatim}
+def the_function(the parameter)
+    print(parameter)
+
+
+the_function("test")
+> test
+\end{verbatim}\\
+
+When you create a variable inside a function it is said to be \textbf{local}
+which mean that it only exists inside the function.
+
+\define{A stack diagram} is a diagram (as a state diagrams) that show the value of each variable,
+but also the function each variable belongs to. Each function is represented by a frame\\
+\define{A frame} is a box with the name of a cuntion beside it and the parameters
+and variables of the function inside it. Frames are arranged in stack taht indicates which function
+called which and so on. \texttt{\_\_main\_\_} is the name for the topmost frame. Each parameter
+refer to the same value as its corresponding argument.\\
+The functions \textbf{\texttt{traceback()}} tells you what program file 
+the error  occured in and what line, and what function were executing at the time. Also 
+show the line of code taht caused the error.
+
+\section{Fruitful functions and void function}
+\define{"Fruitful functions"} (arbitrary name) are functions that return results.\\
+\define{void functions} are functions that perform an action but dont return a value.
+
+\begin{Example}{}{}
+\begin{verbatim}
+def print_twice(value)
+    print(value)
+    print(value)
+
+result = print_twice('bing')
+print('result')
+> None #(as the function print_twice is a void function)
+\end{verbatim}
+\end{Example}
+
+We use for :
+\begin{itemize}
+    \item Creating a group of statements
+    \item Make programme smaller
+    \item Dividing long program into smaller part
+    \item Useful for many programs
+\end{itemize}
+
+
+\chapter{Case Study : Interface disign}
+
+\section{The Turtle Module}
+
+\begin{verbatim}
+#check if the module is install : 
+import turtle
+bob = turtle.Turtle()
+
+#if it's not 
+sudo apt install python-tk
+\end{verbatim}
+
+\begin{verbatim}
+import turtle
+bob = turtle.Turtle #create a function name Turtle that create an object and asign it to a variable
+
+print(bob)
+>> turtle.Turtle object at 04NX53 #bob refer to an object with type Turtle
+\end{verbatim}
+We can also call a \textbf{Method} to move the object around the window. Its like
+a function but use a bit defferent syntax.
+\begin{verbatim}
+bob.fd(100) #argument in pixels
+bob.bk(100)
+bob.lt(90)  #argument is an angle
+bob.rt(100)
+\end{verbatim}
+
+\textbf{For statement} : loop, ends with a comma and take 
+in the body any number of statements.
+\begin{verbatim}
+for i in rang(4):
+    bob.fd(100)
+    bob.lt(90)
+\end{verbatim}
+
+\define{Encapsulation} is the process of putting a program into a function.\\
+\define{Generalization} using variables instead of constant values.\\
+\define{Interface of a function} is a summary of how it is used.\\
+\define{Refactoring} is the process of rearengin a program to improve interfaces 
+and faciliatete code re-use.\\
+
+So we can create a "dev plan" based on the previous definitions : 
+\begin{enumerate}
+    \item writing small programme (without functions)
+    \item Identify coherent pieces and encapsulate it.
+    \item Generalize the new fucntions
+    \item Repeat 1-3 until you have a set of working functions. then copy-paste
+    \item refactoring
+\end{enumerate}
+
+\define{Docstring} is a string at the begging of a function that explain the interface. They are triple quotes
+\begin{verbatim}
+def arc(t, n, length, angle):
+    """ draw n lines segments
+    for having an idead
+    this is a dot string that is in multiple lines"""
+rest of the code
+
+\end{verbatim}
+\textbf{Pre conditions} : true before the functions start executing.\\
+\textbf{Post conditions} in the other hand, include the intend effect of the functions.\\
+Then if the bug is in the pre-conditions, the problem is from the caller and not the functions, but
+if the pre-conditions are satisfied, but not post-conditions, the function is the problem.
+
+
+
+
+\include{exercices.tex}
+\end{document}
